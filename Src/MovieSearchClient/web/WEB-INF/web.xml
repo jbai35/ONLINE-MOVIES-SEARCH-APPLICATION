@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <display-name>Hello, World Application</display-name>
+    <description>
+        This is a simple web application with a source code organization
+        based on the recommendations of the Application Developer's Guide.
+    </description>
+    <servlet>
+        <servlet-name>SearchByTitle</servlet-name>
+        <servlet-class>servlet.SearchByTitleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MovieList</servlet-name>
+        <servlet-class>servlet.MovieListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchByFlickr</servlet-name>
+        <servlet-class>servlet.SearchByFlickr</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchByYoutube</servlet-name>
+        <servlet-class>servlet.SearchByYoutube</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddMovieServlet</servlet-name>
+        <servlet-class>servlet.AddMovieServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchBySentiment</servlet-name>
+        <servlet-class>servlet.SearchBySentiment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchByTitle</servlet-name>
+        <url-pattern>/SearchByTitle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MovieList</servlet-name>
+        <url-pattern>/MovieList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchByFlickr</servlet-name>
+        <url-pattern>/SearchByFlickr</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchByYoutube</servlet-name>
+        <url-pattern>/SearchByYoutube</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddMovieServlet</servlet-name>
+        <url-pattern>/AddMovieServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchBySentiment</servlet-name>
+        <url-pattern>/SearchBySentiment</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+            <error-code>400</error-code>
+            <location>/error.html</location>
+    </error-page>
+    
+    <error-page>
+            <error-code>404</error-code>
+            <location>/error.html</location>
+    </error-page>
+        
+    <error-page>
+            <error-code>500</error-code>
+            <location>/error.html</location>
+    </error-page>
+    
+    <error-page>
+            <exception-type>javax.servlet.ServletException</exception-type>
+            <location>/error.html</location>
+    </error-page>
+  
+</web-app>
